@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Request Quote | Nyakishaba Organic Produce Ltd.</title>
+<meta name="description" content="Request coffee specifications and pricing by grade, volume, and destination. Professional quotes for export buyers.">
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#3c2416" />
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<script defer src="js/main.js"></script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Nyakishaba Organic Produce Ltd.", "url": "https://nyakishabaorganicproduce.github.io/website/", "logo": "assets/logo.svg", "address": {"@type": "PostalAddress", "addressLocality": "Mubende", "addressRegion": "Central Region", "addressCountry": "UG"}, "sameAs": []}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="Nyakishaba Organic Produce Ltd. home">
+      <img src="assets/logo.svg" alt="Nyakishaba Organic Produce Ltd. logo" width="220" height="55">
+    </a>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" data-nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-link nav-dropbtn" type="button" data-dropdown>Products</button>
+        <div class="nav-dropmenu">
+          <a href="products.html#robusta" class="nav-sublink">Robusta</a>
+          <a href="products.html#arabica" class="nav-sublink">Arabica</a>
+          <a href="products.html#specs" class="nav-sublink">Specifications</a>
+        </div>
+      </div>
+      <a href="export-process.html" class="nav-link">Export Process</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="quote.html">Request Quote</a>
+      <a class="btn btn-primary" href="https://wa.me/256757757757?text=Hello%20Nyakishaba%20Team%2C%20I%20would%20like%20to%20request%20coffee%20specifications%20and%20pricing.%20Grade%3A%20%5B%5D%20Volume%3A%20%5B%5D%20Destination%3A%20%5B%5D" target="_blank" rel="noopener">Talk to Export Team</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="banner" style="--banner-image:url('assets/hero-truck.jpg')">
+    <div class="banner-overlay"></div>
+    <div class="container banner-inner">
+      <h1>Request Specifications & Pricing</h1>
+      <p class="muted">Tell us your required grade, volume, and destination. We will respond with specifications and a professional quote.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="card card-pad">
+        <h2>Quote Request</h2>
+        <form class="form" data-long-quote>
+          <div class="form-row">
+            <label>Full Name<input name="name" required></label>
+            <label>Company<input name="company"></label>
+          </div>
+          <div class="form-row">
+            <label>Email<input type="email" name="email" required></label>
+            <label>Phone/WhatsApp<input name="phone" placeholder="+256..."></label>
+          </div>
+          <div class="form-row">
+            <label>Grade
+              <select name="grade" required>
+                <option value="">Select grade</option>
+                <option>Robusta Screen 15+</option>
+                <option>Robusta Screen 18</option>
+                <option>Robusta FAQ</option>
+                <option>Arabica (by request)</option>
+              </select>
+            </label>
+            <label>Quantity (MT)<input name="qty" placeholder="e.g., 20" required></label>
+          </div>
+          <div class="form-row">
+            <label>Destination<input name="dest" placeholder="Country/Port" required></label>
+            <label>Incoterms<input name="incoterms" placeholder="FOB / CIF / EXW"></label>
+          </div>
+          <label>Buyer Specification Notes<textarea name="notes" rows="5" placeholder="Moisture %, packaging, screening, defect tolerance, target shipment date..."></textarea></label>
+          <button class="btn btn-primary btn-lg" type="submit">Send Request</button>
+          <p class="muted small">This form opens your email client with a prepared message. You can also send via WhatsApp.</p>
+          <a class="btn btn-ghost" target="_blank" rel="noopener"
+             href="https://wa.me/256757757757?text=Hello%20Nyakishaba%20Team%2C%20I%20request%20specifications%20and%20pricing.%20Name%3A%20%5B%5D%20Company%3A%20%5B%5D%20Grade%3A%20%5B%5D%20Quantity%3A%20%5B%5D%20Destination%3A%20%5B%5D%20Incoterms%3A%20%5B%5D%20Notes%3A%20%5B%5D">Send on WhatsApp</a>
+        </form>
+      </div>
+
+      <div>
+        <div class="card card-pad">
+          <h3>What to Include</h3>
+          <ul class="checklist">
+            <li>Grade and screening preference</li>
+            <li>Volume (MT or container)</li>
+            <li>Destination and preferred terms</li>
+            <li>Packaging requirement</li>
+            <li>Target shipment timeline</li>
+          </ul>
+        </div>
+        <div class="spacer"></div>
+        <figure class="media">
+          <img src="assets/cherries-store.jpg" alt="Bulk organic coffee cherries collected at Nyakishaba aggregation center in Mubende, Uganda">
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <img src="assets/logo.svg" alt="Nyakishaba Organic Produce Ltd." class="footer-logo">
+      <p class="muted">
+        Ugandan coffee production, aggregation, and export coordination focused on traceable supply, disciplined handling, and value-addition growth.
+      </p>
+    </div>
+
+    <div>
+      <h4>Company</h4>
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="export-process.html">Export Process</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="quote.html">Request Quote</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Contacts</h4>
+      <ul class="footer-links">
+        <li><a href="tel:+256757757757">+256 757 757 757</a></li>
+        <li><a href="mailto:info@nyakishabaorganicproduce.com">info@nyakishabaorganicproduce.com</a></li>
+        <li class="muted">Mubende, Central Region, Uganda</li>
+        <li class="muted">Company Reg No: <strong>80020002867415</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <small class="muted">© <span data-year></span> Nyakishaba Organic Produce Ltd. All rights reserved.</small>
+    <small class="muted">Built for export buyers & investors.</small>
+  </div>
+</footer>
+
+
+</body>
+</html>

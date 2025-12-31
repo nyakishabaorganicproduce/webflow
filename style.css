@@ -115,7 +115,7 @@ a{color:inherit}
 .hero{
   position:relative;
   min-height: 72vh;
-  background-image: var(--hero-image);
+  background-image: var(--hero-image, url('./assets/hero-truck.jpg'));
   background-size: cover;
   background-position: center;
   border-bottom: 1px solid var(--border);
@@ -201,6 +201,18 @@ input:focus, select:focus, textarea:focus{border-color: rgba(60,36,22,.38); box-
   font-size: clamp(26px, 2.4vw, 34px);
   margin: 0 0 10px;
 }
+.qc-block{
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.qc-block h3{
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .muted{color: var(--muted)}
 .small{font-size: 12.5px}
 .card{
@@ -243,7 +255,7 @@ input:focus, select:focus, textarea:focus{border-color: rgba(60,36,22,.38); box-
   font-weight:600;
   color: rgba(42,26,17,.82);
 }
-.actions{margin-top:16px; display:flex; gap:10px; flex-wrap:wrap}
+.actions{margin-top:16px;  justify-content: center; display:flex; gap:10px; flex-wrap:wrap}
 .checklist{margin: 14px 0 0; padding:0; list-style:none; display:grid; gap:10px}
 .checklist li{position:relative; padding-left:28px; color: rgba(42,26,17,.82)}
 .checklist li::before{
@@ -348,4 +360,23 @@ input:focus, select:focus, textarea:focus{border-color: rgba(60,36,22,.38); box-
   .nav-toggle{display:inline-flex; align-items:center; justify-content:center; margin-left:auto}
   .nav-dropdown:hover .nav-dropmenu{display:none}
   .nav-dropmenu{position:static; display:block; border:none; box-shadow:none; background: transparent; padding:0}
+
+  .grid-4{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px){
+  .grid-4{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px){
+  .grid-4{
+    grid-template-columns: 1fr;
+  }
+}
+
 }

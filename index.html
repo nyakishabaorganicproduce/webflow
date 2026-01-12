@@ -7,7 +7,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#3c2416" />
-<link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+<link rel="icon" href="assets/logo.png" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
 <header class="site-header">
   <div class="container nav-wrap">
     <a class="brand" href="index.html" aria-label="Nyakishaba Organic Produce Ltd. home">
-      <img src="assets/logo.png" alt="Nyakishaba Organic Produce Ltd. logo" width="220" height="55">
+      <img src="assets/logo.png" alt="Nyakishaba Organic Produce Ltd. logo" class="logo"><span> <b>NYAKISHABA ORGANIC PRODUCE LIMITED</b></span>
     </a>
 
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
@@ -220,13 +220,13 @@
   <section class="section">
     <div class="container split">
       <div class="card card-pad">
-  <h2>Post-Harvest Handling & Quality Control</h2>
+        <h2>Post-Harvest Handling & Quality Control</h2>
 
-  <p class="muted">
-    Nyakishaba Organic Produce Limited maintains process discipline and documentation systems designed to preserve coffee integrity,
-    reduce defects, and align final output with buyer specifications. From intake to storage and shipment preparation,
-    each step is managed to ensure traceability, consistency, and export readiness.
-  </p>
+             <p class="muted">
+               Nyakishaba Organic Produce Limited maintains process discipline and documentation systems designed to preserve coffee integrity,
+               reduce defects, and align final output with buyer specifications. From intake to storage and shipment preparation,
+                each step is managed to ensure traceability, consistency, and export readiness.
+             </p>
 
   <div class="qc-block">
     <h3>Controlled Harvest Intake</h3>
@@ -274,14 +274,20 @@
 </div>
 
 
-      <div class="grid-2">
-        <figure class="media">
-          <img src="assets/cherries-store.jpg" alt="Bulk organic coffee cherries collected at Nyakishaba aggregation center in Mubende, Uganda">
+      <div class="qc-image-column">
+         <figure class="media qc-image">
+           <img src="assets/cherries-store.jpg" alt="Harvest intake and aggregation">
+         </figure>
+
+        <figure class="media qc-image">
+          <img src="assets/farmers-group.jpg" alt="Weighing and lot identification">
         </figure>
-        <figure class="media">
-          <img src="assets/cherries-store-wide.jpg" alt="Clean storage of organic coffee cherries at Nyakishaba post-harvest handling facility in Uganda">
+
+        <figure class="media qc-image">
+          <img src="assets/farmers-group.jpg" alt="Controlled coffee production base">
         </figure>
       </div>
+
     </div>
   </section>
   
@@ -340,7 +346,9 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div>
-      <img src="assets/logo.svg" alt="Nyakishaba Organic Produce Ltd." class="footer-logo">
+      <a class="brand" href="index.html" aria-label="Nyakishaba Organic Produce Ltd. home">
+      <img src="assets/logo.png" alt="Nyakishaba Organic Produce Ltd. logo" class="logo"><span> <b>NYAKISHABA ORGANIC PRODUCE LIMITED</b></span>
+    </a>
       <p class="muted">
         Ugandan coffee production, aggregation, and export coordination focused on traceable supply, disciplined handling, and value-addition growth.
       </p>

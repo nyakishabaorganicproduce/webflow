@@ -75,12 +75,58 @@
   }
 
   // Dropdown button support for touch devices
-  document.querySelectorAll("[data-dropdown]").forEach(btn=>{
-    btn.addEventListener("click", ()=>{
-      const menu = btn.parentElement.querySelector(".nav-dropmenu");
-      if(!menu) return;
-      const show = menu.style.display === "block";
-      menu.style.display = show ? "none" : "block";
+// Dropdown support: click-to-open + close on outside click + Esc
+const dropdownButtons = document.querySelectorAll("[data-dropdown]");
+
+dropdownButtons.forEach((btn) => {
+  const wrap = btn.closest(".nav-dropdown");
+  if (!wrap) return;
+
+  btn.setAttribute("aria-haspopup", "true");
+  btn.setAttribute("aria-expanded", "false");
+
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // close other dropdowns
+    document.querySelectorAll(".nav-dropdown.open").forEach(d => {
+      if (d !== wrap) d.classList.remove("open");
     });
+
+    const open = wrap.classList.toggle("open");
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
   });
+});
+
+// Close dropdown if clicking outside
+document.addEventListener("click", () => {
+  document.querySelectorAll(".nav-dropdown.open").forEach(d => d.classList.remove("open"));
+  document.querySelectorAll("[data-dropdown][aria-expanded='true']").forEach(b => b.setAttribute("aria-expanded","false"));
+});
+
+// Close dropdown on Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape") return;
+  document.querySelectorAll(".nav-dropdown.open").forEach(d => d.classList.remove("open"));
+  document.querySelectorAll("[data-dropdown][aria-expanded='true']").forEach(b => b.setAttribute("aria-expanded","false"));
+});
+// Subtle scroll-reveal animations
+const reveal = (el) => el.classList.add("reveal-in");
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      reveal(entry.target);
+      io.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".card, .media, .qc-block, .section-head").forEach((el) => {
+  el.classList.add("reveal");
+  io.observe(el);
+});
+
+
 })();
